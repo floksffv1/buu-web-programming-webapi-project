@@ -16,6 +16,7 @@ app.get('/contacts', (req, res) =>{
 app.post('/contacts',(req,res)=>{
     let newcontacts = req.body
     contacts.push(newcontacts)
+    res.json(newcontacts)
 })
 
 app.listen(3000, () => {
