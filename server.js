@@ -13,6 +13,11 @@ app.get('/contacts', (req, res) =>{
     res.json(contacts)
 })
 
+app.post('/contacts',(req,res)=>{
+    let newcontacts = req.body
+    contacts.push(newcontacts)
+    res.json(contacts)
+})
 
 app.listen(3000, () => {
     console.log('API Server started at port 3000')
